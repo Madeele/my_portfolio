@@ -1,0 +1,25 @@
+---
+export interface Props {
+	title: string;
+	body: string;
+	href: string;
+}
+
+const { href, title, body } = Astro.props;
+---
+
+<li class="w-96 min-w-80 flex p-0.5 rounded bg-zinc-100 hover:bg-gradient-to-r hover:from-teal-600 hover:to-teal-400">
+	<div class="h-full w-full flex flex-col bg-white p-4 rounded-sm">
+		<a href={href} class="w-full">
+			<h2 class="font-semibold text-lg">
+				{title}
+			</h2>
+			<p>
+				{body}
+			</p>
+		</a>
+	</div>
+</li>
+<style>
+	
+</style>
