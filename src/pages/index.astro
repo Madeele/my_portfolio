@@ -6,18 +6,44 @@ import NavLink from '../components/NavLink.astro';
 
 <Layout title="Portfolio | Magdalena Polakowska" description="Portfolio Home page">
 	<main class="min-w-screen m-auto box-border">
-		<nav class="w-full h-[56px] px-12 py-2 bg-white/75 flex gap-4 justify-between items-center fixed z-20 backdrop-blur">
-			<div class="flex flex-row space-x-2 items-center"><img class="w-10" src="/portfolio/public/images/logo.png"><p>Magdalena Polakowska</p></div>	
-			<div class="flex gap-4">
+		<nav class="w-full h-[56px] md:px-12 px-2 py-2 bg-white/75 flex gap-4 justify-between items-center fixed z-20 backdrop-blur">
+			<div class="flex flex-row space-x-2 items-center">
+				<img class="w-10" src="/portfolio/public/images/logo.png"><p>Magdalena Polakowska</p>
+			</div>	
+			<div class="md:flex gap-4 hidden">
 				<NavLink text="Home" href="#home"></NavLink>
 				<NavLink text="Projects" href="#projects"></NavLink>
 				<NavLink text="About me" href="#about_me"></NavLink>
 				<NavLink text="Contact" href="#contact"></NavLink>
 			</div>
+			<div class="flex md:hidden">
+				<button id="menu-button" class="p-2 w-fit bg-zinc-100 rounded">
+					<?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M3 5h18M3 12h18M3 19h18" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+				</button>
+			</div>
 		</nav>
-		<div class="w-full h-screen flex flex-col snap-y snap-mandatory overflow-scroll scroll-smooth">
-			<div class="w-full min-h-[calc(100vh_-_56px)] flex flex-row justify-between items-center snap-center px-24" id="home">
-				<h1 class="h1"><span class="text-9xl">Hello<span class="text-teal-600">,</span></span> <span>My name is</span> <span class="text-teal-600 pb-4">Magdalena</span></h1>
+		<nav class="absolute w-full h-full bg-white z-40 px-2 pb-12 pt-2 flex-col" style="display: none;" id="burger-menu">
+			<div class="flex flex-col h-full justify-between">
+				<div class="flex justify-end md:hidden">
+					<button id="menu-close" class="p-2 w-fit bg-zinc-100 rounded">
+						<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" width="24" height="24" color="#000000"><defs><style>.cls-6374f8d9b67f094e4896c61e-1{fill:none;stroke:currentColor;stroke-miterlimit:10;}</style></defs><circle class="cls-6374f8d9b67f094e4896c61e-1" cx="12" cy="12" r="10.5"></circle><line class="cls-6374f8d9b67f094e4896c61e-1" x1="16.77" y1="7.23" x2="7.23" y2="16.77"></line><line class="cls-6374f8d9b67f094e4896c61e-1" x1="7.23" y1="7.23" x2="16.77" y2="16.77"></line></svg>
+					</button>
+				</div>
+				<div class="flex flex-col space-x-2 items-center">
+					<img class="w-10" src="/portfolio/public/images/logo.png">
+					<p>Magdalena Polakowska</p>
+				</div>	
+				<div class="flex flex-col gap-4 h-full items-center justify-center">
+					<NavLink text="Home" href="#home"></NavLink>
+					<NavLink text="Projects" href="#projects"></NavLink>
+					<NavLink text="About me" href="#about_me"></NavLink>
+					<NavLink text="Contact" href="#contact"></NavLink>
+				</div>
+			</div>
+		</nav>
+		<div class="w-full md:h-screen flex flex-col md:snap-y md:snap-mandatory overflow-scroll scroll-smooth">
+			<div class="w-full md:min-h-[calc(100vh_-_56px)] h-screen py-24 md:py-0 flex md:flex-row flex-col justify-between items-center snap-center md:px-24 sm:px-6" id="home">
+				<h1 class="h1"><span class="md:text-9xl sm:text-xl">Hello<span class="text-teal-600">,</span></span> <span>My name is</span> <span class="text-teal-600 pb-4">Magdalena</span></h1>
 				<div class="flex flex-col gap-2 z-10">
 					<div class="flex flex-row gap-2">
 						<?xml version="1.0" encoding="UTF-8"?><svg width="24px" stroke-width="1.5" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M10 17h-.667a2 2 0 01-2-2v-1.889C7.333 12.556 6 12 6 12s1.333-.556 1.333-1.111V9a2 2 0 012-2H10M14 17h.667a2 2 0 002-2v-1.889C16.667 12.556 18 12 18 12s-1.333-.556-1.333-1.111V9a2 2 0 00-2-2H14" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M21 3.6v16.8a.6.6 0 01-.6.6H3.6a.6.6 0 01-.6-.6V3.6a.6.6 0 01.6-.6h16.8a.6.6 0 01.6.6z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
@@ -33,7 +59,7 @@ import NavLink from '../components/NavLink.astro';
 					</div>
 				</div>	
 			</div>
-			<div class="snap-center min-h-screen flex flex-col justify-center gap-12 px-24" id="projects">
+			<div class="snap-center md:min-h-screen flex flex-col justify-center gap-12 px-6 md:px-24 pb-24 md:pb-0" id="projects">
 				<h2 class="h2">My projects</h2>
 				<ul role="list" class="w-full flex flex-row gap-4 justify-center flex-wrap">
 					<Card
@@ -53,9 +79,9 @@ import NavLink from '../components/NavLink.astro';
 					/>
 				</ul>
 			</div>
-			<div class="w-full snap-center min-h-screen flex flex-col justify-center gap-12 px-24" id="about_me">
+			<div class="w-full snap-center md:min-h-screen flex flex-col justify-center gap-12 px-6 md:px-24 pb-24 md:pb-0" id="about_me">
 				<h2 class="h2">About me</h2>
-				<div class="flex flex-row gap-24 items-center">
+				<div class="flex md:flex-row flex-col-reverse md:gap-24 gap-6 items-center">
 					<div class="flex flex-col gap-4">
 						<p>My name is <span class="font-semibold">Magdalena Polakowska</span>. In 2019, I made the life-changing decision to move from Poland to Denmark.</p>
 						<p>
@@ -65,11 +91,11 @@ import NavLink from '../components/NavLink.astro';
 							In addition to my expertise in web development, I also have experience in 3D sculpting and a genuine love for painting and drawing. During my free time, you might find me nurturing my collection of plants, exploring different corners of the world, or simply relaxing on the beach. I am always eager for new adventures and opportunities for personal growth. The future holds countless unknown possibilities, and I can't wait to embrace them.
 						</p>
 					</div>
-					<img src="../../public/images/magda.jpeg" class="w-72 h-auto rounded">
+					<img src="../../public/images/magda.jpeg" class="md:w-72 w-40 h-auto rounded">
 				</div>
 			</div>
-			<div class="w-full snap-center min-h-screen flex flex-col justify-center gap-12 px-48" id="contact">
-				<div class="flex flex-col gap-4 p-12 text-white bg-gradient-to-r from-teal-600 to-teal-700 rounded">
+			<div class="w-full snap-center md:min-h-screen flex flex-col justify-center gap-12 px-6 md:px-48 pb-24 md:pb-0" id="contact">
+				<div class="flex flex-col gap-4 md:p-12 p-6 text-white bg-gradient-to-r from-teal-600 to-teal-700 rounded">
 					<h2 class="text-xl font-semibold">Let's Connect!</h2>
 					<p>I'd love to hear from you. Whether you have a question, a project idea, or just want to say hello, I'm here and ready to chat.<br>Feel free to reach out using the contact information below. Let's create something amazing together!</p>
 					<div class="pt-2 flex flex-row gap-4 ">
@@ -93,3 +119,28 @@ import NavLink from '../components/NavLink.astro';
 	}
 	
 </style>
+
+<script>
+	document.getElementById("menu-button")?.addEventListener("click",openMenu)
+	document.getElementById("menu-close")?.addEventListener("click",closeMenu)
+
+
+	function openMenu(){
+		let open = document.getElementById("burger-menu") as HTMLElement ;
+  		// open.classList.toggle("hidden");
+
+		if (open.style.display = "none"){
+			open.style.display = "flex"
+		}else{
+			open.style.display = "none"
+		}
+	}
+	function closeMenu(){
+		let close = document.getElementById("burger-menu") as HTMLElement ;
+		if (close.style.display = "flex"){
+			close.style.display = "none"
+		}else{
+			close.style.display = "flex"
+		}
+	}
+</script>
