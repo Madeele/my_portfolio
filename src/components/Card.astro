@@ -3,20 +3,34 @@ export interface Props {
 	title: string;
 	body: string;
 	href: string;
+	group:string
+	tags:Array <string>;
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, body, group,tags } = Astro.props;
 ---
 
-<li class="w-96 min-w-80 flex p-0.5 rounded bg-zinc-100 hover:bg-gradient-to-r hover:from-teal-600 hover:to-teal-400">
-	<div class="h-full w-full flex flex-col bg-white p-4 rounded-sm">
-		<a href={href} class="w-full">
-			<h2 class="font-semibold text-lg">
-				{title}
-			</h2>
-			<p>
-				{body}
-			</p>
+<li class="w-96 min-w-80 flex p-1 rounded bg-white transition duration-300 hover:bg-[#66D9D3] z-20">
+	<div class="h-full w-full flex flex-col bg-white rounded-sm">
+		<a href={href} class="flex w-full h-full group">
+			<div class="flex flex-col p-4 space-y-4 justify-between">
+				<div class="flex flex-col space-y-4">
+					<div class="flex flex-row w-full justify-between items-start">
+						<h2 class="font-semibold text-lg w-3/5 transition duration-300 text-zinc-900 group-hover:text-[#e84162]">
+							{title}
+						</h2>
+						<p class="text-xs text-white w-fit h-fit flex px-2 py-1 bg-zinc-700 rounded">{group}</p>
+					</div>
+					<p>
+						{body}
+					</p>
+				</div>
+				<div class="flex flex-row flex-wrap space-x-2 justify-self-end">
+					{tags.map(tag =>
+						<p class="text-xs px-3 py-2 bg-zinc-100 rounded-full">{tag}</p>
+					)}
+				</div>
+			</div>
 		</a>
 	</div>
 </li>
