@@ -105,7 +105,7 @@ import MobileNavLink from "../components/MobileNavLink.astro";
         class="relative w-full md:min-h-[100vh] h-[calc(100vh_-_100px)] flex flex-col justify-between items-center snap-center"
         id="home">
         <div
-          class="pt-24 md:pt-0 flex md:flex-row flex-col w-full h-full justify-between items-center border-b border-[#554236] md:pl-12">
+          class="pt-24 md:pt-0 flex md:flex-row flex-col w-full h-full justify-between items-center border-b border-[#554236] md:pl-12 2xl:pl-24 gap-6 md:gap-0">
           <h1 class="px-6 md:px-0 h1 font-serif">
             <span class="xl:text-8xl md:text-5xl text-4xl">Hello!</span>
             <span
@@ -117,7 +117,7 @@ import MobileNavLink from "../components/MobileNavLink.astro";
             >
           </h1>
           <div
-            class="md:w-[257px] w-full md:h-full pb-2 md:pb-0 md:pl-4 flex md:flex-col flex-row flex-wrap justify-center gap-2 z-10 md:border-l border-[#554236]">
+            class="md:w-[257px] 2xl:w-[459px] w-full md:h-full pb-2 md:pb-0 md:pl-4 flex md:flex-col flex-row flex-wrap justify-center gap-2 2xl:gap-6 z-10 md:border-l border-[#554236] 2xl:text-xl">
             <div class="flex flex-row gap-2">
               <!--?xml version="1.0" encoding="UTF-8"?-->
               <svg
@@ -245,14 +245,14 @@ import MobileNavLink from "../components/MobileNavLink.astro";
           </div>
         </div>
         <div
-          class="hidden md:block md:absolute bottom-32 md:bottom-28 text-3xl md:text-2xl md:right-48 md:transform md:-rotate-90">
+          class="hidden md:block md:absolute bottom-32 md:bottom-28 text-3xl md:text-2xl md:right-48 2xl:right-96 2xl:bottom-36 md:transform md:-rotate-90">
           MY PORTFOLIO
         </div>
         <div
           class="w-full justify-center flex flex-row z-40 divide-x divide-[#554236] border-b border-[#554236]">
           <a
             href="https://www.linkedin.com/in/magdalenapolakowska/"
-            class="px-4 py-2 flex flex-row gap-2 hover:text-[#939650]"
+            class="px-4 py-2 2xl:py-6 flex flex-row gap-2 hover:text-[#939650]"
             ><!--?xml version="1.0" encoding="UTF-8"?-->
             <svg
               width="24px"
@@ -275,7 +275,9 @@ import MobileNavLink from "../components/MobileNavLink.astro";
                 stroke-linejoin="round"></path></svg
             >LinkedIn</a
           >
-          <a href="" class="px-4 py-2 flex flex-row gap-2 hover:text-[#939650]"
+          <a
+            href=""
+            class="px-4 py-2 2xl:py-6 flex flex-row gap-2 hover:text-[#939650]"
             ><!--?xml version="1.0" encoding="UTF-8"?-->
             <svg
               width="24px"
@@ -299,7 +301,8 @@ import MobileNavLink from "../components/MobileNavLink.astro";
         <div
           class="md:min-h-screen flex flex-col justify-center items-center py-12 md:py-0">
           <div class="absolute w-full h-full z-10"></div>
-          <div class="w-max-[1200px] px-12 flex flex-col gap-6">
+          <div
+            class="2xl:max-w-[1400px] xl:max-w-[1200px] px-12 flex flex-col gap-6">
             <h2
               class="h2 text-3xl sm:text-4xl z-20 font-serif font-black text-center md:text-left">
               My projects
@@ -340,11 +343,12 @@ import MobileNavLink from "../components/MobileNavLink.astro";
         </div>
       </div>
       <div class="relative snap-center py-16 md:pb-0" id="bachelor-project">
-        <div class="md:min-h-screen flex flex-col justify-center items-center">
+        <div
+          class="md:min-h-screen flex flex-col justify-center items-center px-6 md:px-12">
           <div class="absolute w-full h-full z-10 border-y border-[#554236]">
           </div>
           <div
-            class="w-max-[1200px] px-12 flex flex-col md:flex-row gap-6 items-center">
+            class="2xl:max-w-[1400px] xl:max-w-[1200px] flex flex-col md:flex-row gap-6 items-center">
             <div class="w-full flex flex-col gap-6">
               <div class="w-full flex flex-col space-y-4">
                 <h3 class="h3 text-2xl sm:text-2xl z-20 font-serif font-black">
@@ -375,9 +379,9 @@ import MobileNavLink from "../components/MobileNavLink.astro";
         </div>
       </div>
       <div
-        class="w-full snap-center md:min-h-screen flex flex-col justify-center gap-2 px-6 md:px-24 py-16 md:pb-0 items-center"
+        class="w-full snap-center md:min-h-screen flex flex-col justify-center gap-2 px-6 md:px-12 py-16 md:pb-0 items-center"
         id="about_me">
-        <div class="w-max-[1200px] gap-6 flex flex-col">
+        <div class="2xl:max-w-[1400px] xl:max-w-[1200px] gap-6 flex flex-col">
           <h2
             class="h2 text-3xl sm:text-4xl z-20 font-serif font-black text-center md:text-left">
             About me
@@ -420,11 +424,11 @@ import MobileNavLink from "../components/MobileNavLink.astro";
         class="relative w-full snap-center md:min-h-screen flex flex-col justify-center gap-12 px-6 md:px-48 pb-24 md:pb-0 items-center"
         id="contact">
         <div
-          class="absolute bg-[#cc543a] rounded-full w-40 h-40 z-10 top-36 right-6 sm:top-32 sm:right-12 md:top-[150px] xl:top-[180px] md:right-80">
+          class="absolute bg-[#cc543a] rounded-full w-40 h-40 z-10 -top-10 right-6 sm:top-32 sm:right-12 md:top-[150px] xl:top-[180px] md:right-80">
         </div>
         <div
-          class="w-max-[900px] bg-[#f0ded1] flex flex-col gap-4 md:p-12 p-6 border border-[#554236] z-40">
-          <h2 class="text-3xl font-black">Let's Connect!</h2>
+          class="max-w-[900px] bg-[#f0ded1] flex flex-col gap-4 md:p-12 p-6 border border-[#554236] z-40">
+          <h2 class="text-2xl font-black font-serif">Let's Connect!</h2>
           <p class="w-full">
             I'd love to hear from you. Whether you have a question, a project
             idea, or just want to say hello, I'm here and ready to chat.<br
