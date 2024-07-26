@@ -44,12 +44,12 @@ import MobileNavLink from "../components/MobileNavLink.astro";
       </div>
     </nav>
     <nav
-      class="fixed w-full h-full bg-[#f0ded1] z-50 px-2 pb-12 pt-2 flex-col"
+      class="fixed w-full h-full bg-[#f0ded1] z-50 pb-12 pt-2 flex-col"
       style="display: none;"
       id="burger-menu">
       <div class="flex flex-col h-full gap-4">
-        <div class="flex md:hidden justify-end">
-          <button id="menu-close" class="p-1 w-fit">
+        <div class="flex md:hidden justify-end px-2">
+          <button id="menu-close" class="p-2 w-fit">
             <svg
               id="Layer_1"
               data-name="Layer 1"
@@ -86,7 +86,8 @@ import MobileNavLink from "../components/MobileNavLink.astro";
           </button>
         </div>
         <div class="flex flex-col gap-12 items-center">
-          <p class="text-xl text-[#939650] font-serif font-black">
+          <p
+            class="w-full text-xl text-[#939650] font-serif font-black border-b border-[#554236] pb-6 text-center">
             Magdalena Polakowska
           </p>
 
@@ -95,6 +96,10 @@ import MobileNavLink from "../components/MobileNavLink.astro";
             <MobileNavLink text="Projects" href="#projects" />
             <MobileNavLink text="About me" href="#about_me" />
             <MobileNavLink text="Contact" href="#contact" />
+          </div>
+          <div
+            class="absolute w-80 text-center bottom-10 right-1/2 left-1/2 -translate-x-1/2">
+            <p class="text-[#947a6d]">Magdalena Polakowska | 2024</p>
           </div>
         </div>
       </div>
@@ -107,9 +112,13 @@ import MobileNavLink from "../components/MobileNavLink.astro";
         <div
           class="pt-24 md:pt-0 flex md:flex-row flex-col w-full h-full justify-between items-center border-b border-[#554236] md:pl-12 2xl:pl-24 gap-6 md:gap-0">
           <h1 class="px-6 md:px-0 h1 font-serif">
-            <span class="xl:text-8xl md:text-5xl text-4xl">Hello!</span>
+            <span class="xl:text-8xl md:text-5xl text-4xl font-black"
+              >Hello!</span
+            >
             <span
-              ><span class="xl:text-8xl md:text-5xl text-4xl">I'm</span>
+              ><span class="xl:text-8xl md:text-5xl text-4xl font-black"
+                >I'm</span
+              >
               <span
                 class="text-[#939650] font-black xl:text-8xl md:text-5xl text-4xl"
                 >Magdalena</span
@@ -252,7 +261,7 @@ import MobileNavLink from "../components/MobileNavLink.astro";
           class="w-full justify-center flex flex-row z-40 divide-x divide-[#554236] border-b border-[#554236]">
           <a
             href="https://www.linkedin.com/in/magdalenapolakowska/"
-            class="px-4 py-2 2xl:py-6 flex flex-row gap-2 hover:text-[#939650]"
+            class="px-4 py-2 2xl:py-6 flex flex-row gap-2 hover:text-[#939650] text-[#939650] sm:text-[#554236]"
             ><!--?xml version="1.0" encoding="UTF-8"?-->
             <svg
               width="24px"
@@ -277,7 +286,7 @@ import MobileNavLink from "../components/MobileNavLink.astro";
           >
           <a
             href=""
-            class="px-4 py-2 2xl:py-6 flex flex-row gap-2 hover:text-[#939650]"
+            class="px-4 py-2 2xl:py-6 flex flex-row gap-2 hover:text-[#939650] text-[#939650] sm:text-[#554236]"
             ><!--?xml version="1.0" encoding="UTF-8"?-->
             <svg
               width="24px"
@@ -313,7 +322,7 @@ import MobileNavLink from "../components/MobileNavLink.astro";
               <Card
                 href="#bachelor-project"
                 title="Design System"
-                body="Bachelor Project about Design Systems and Component Libraries."
+                body="Bachelor Project - Design Systems and Component Libraries."
                 group="Bachelor Project"
                 tags={["web app", "design systems", "design"]}
               />
@@ -348,8 +357,8 @@ import MobileNavLink from "../components/MobileNavLink.astro";
           <div class="absolute w-full h-full z-10 border-y border-[#554236]">
           </div>
           <div
-            class="2xl:max-w-[1400px] xl:max-w-[1200px] flex flex-col md:flex-row gap-6 items-center">
-            <div class="w-full flex flex-col gap-6">
+            class="2xl:max-w-[1400px] xl:max-w-[1200px] flex flex-col md:flex-row gap-6 md:gap-16 items-center">
+            <div class="w-full flex flex-col gap-6 pl-4">
               <div class="w-full flex flex-col space-y-4">
                 <h3 class="h3 text-2xl sm:text-2xl z-20 font-serif font-black">
                   Bachelor project || Web Development
@@ -372,8 +381,8 @@ import MobileNavLink from "../components/MobileNavLink.astro";
               </div>
             </div>
             <img
-              src="/portfolio/images/library-example.png"
-              class="h-40 bg-red-400"
+              src="/portfolio/images/component-library.jpg"
+              class="xl:h-96 md:h-80 h-60 bg-red-400 border border-[#554236]"
             />
           </div>
         </div>
@@ -387,7 +396,7 @@ import MobileNavLink from "../components/MobileNavLink.astro";
             About me
           </h2>
           <div
-            class="flex md:flex-row flex-col-reverse md:gap-24 gap-2 items-center">
+            class="flex md:flex-row flex-col-reverse md:gap-16 gap-2 items-center">
             <div class="flex flex-col gap-4">
               <p>
                 Hi! My name is <span class="font-semibold"
@@ -414,8 +423,8 @@ import MobileNavLink from "../components/MobileNavLink.astro";
               </p>
             </div>
             <img
-              src="./images/aboutme.png"
-              class="md:w-1/3 w-52 h-auto rounded"
+              src="./images/me.png"
+              class="xl:w-[500px] w-60 h-auto rounded"
             />
           </div>
         </div>
@@ -438,7 +447,7 @@ import MobileNavLink from "../components/MobileNavLink.astro";
           <div class="pt-2 flex flex-row gap-4">
             <a
               href="https://www.linkedin.com/in/magdalenapolakowska/"
-              class="flex flex-row gap-2 w-fit hover:text-[#939650]"
+              class="flex flex-row gap-2 w-fit hover:text-[#939650] text-[#939650] sm:text-[#554236]"
               href=""
               ><!--?xml version="1.0" encoding="UTF-8"?-->
               <svg
@@ -465,7 +474,7 @@ import MobileNavLink from "../components/MobileNavLink.astro";
 
             <a
               href="https://www.instagram.com/madeele_design/"
-              class="flex flex-row gap-2 w-fit hover:text-[#939650]"
+              class="flex flex-row gap-2 w-fit hover:text-[#939650] text-[#939650] sm:text-[#554236]"
               ><!--?xml version="1.0" encoding="UTF-8"?-->
               <svg
                 width="24px"
@@ -495,7 +504,7 @@ import MobileNavLink from "../components/MobileNavLink.astro";
         </div>
         <div
           class="absolute w-80 text-center bottom-10 right-1/2 left-1/2 -translate-x-1/2">
-          <p>Magdalena Polakowska | 2024</p>
+          <p class="text-[#947a6d]">Magdalena Polakowska | 2024</p>
         </div>
       </div>
     </div>
